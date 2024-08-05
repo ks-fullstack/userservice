@@ -1,0 +1,65 @@
+{
+    "LOCAL": {
+        "apiBasePath": "/userservice/api",
+        "dbConnectionStr": "mongodb+srv://$username$:$password$@cluster0.nse481o.mongodb.net/$dbname$",
+        "dbName": "intranet",
+        "dbUsername": "ksfullstack",
+        "dbPassword": "Fu11stack",
+        "dbSettings": {
+            "useNewUrlParser": true, 
+            "useUnifiedTopology": true, 
+            "connectTimeoutMS": 5000, 
+            "socketTimeoutMS": 20000, 
+            "heartbeatFrequencyMS": 10000, 
+            "retryWrites": true, 
+            "w": "majority",
+            "ssl": true,
+            "appname": "MongoDB%20Compass",
+            "replicaSet": "atlas-ua1jyo-shard-0",
+            "readPreference": "primary"
+        },
+        "serviceName": "UserService"
+    },
+    "DEV": {
+        "apiBasePath": "/userservice/api",
+        "dbConnectionStr": "mongodb+srv://$username$:$password$@cluster0.nse481o.mongodb.net/$dbname$",
+        "dbName": "intranet",
+        "dbUsername": "ksfullstack",
+        "dbPassword": "Fu11stack",
+        "dbSettings": {
+            "useNewUrlParser": true, 
+            "useUnifiedTopology": true, 
+            "connectTimeoutMS": 5000, 
+            "socketTimeoutMS": 20000, 
+            "heartbeatFrequencyMS": 10000, 
+            "retryWrites": true, 
+            "w": "majority",
+            "ssl": true,
+            "appname": "MongoDB%20Compass",
+            "replicaSet": "atlas-ua1jyo-shard-0",
+            "readPreference": "primary"
+        },
+        "serviceName": "UserService"
+    },
+    "PROD": {
+        "apiBasePath": "/userservice/api",
+        "dbConnectionStr": "mongodb+srv://$username$:$password$@cluster0.nse481o.mongodb.net/$dbname$",
+        "dbName": "intranet",
+        "dbUsername": "ksfullstack",
+        "dbPassword": "Fu11stack",
+        "dbSettings": {
+            "useNewUrlParser": true, 
+            "useUnifiedTopology": true, 
+            "connectTimeoutMS": 5000, 
+            "socketTimeoutMS": 20000, 
+            "heartbeatFrequencyMS": 10000, 
+            "retryWrites": true, 
+            "w": "majority",
+            "ssl": true,
+            "appname": "MongoDB%20Compass",
+            "replicaSet": "atlas-ua1jyo-shard-0",
+            "readPreference": "primary"
+        },
+        "serviceName": "UserService"
+    }
+}
