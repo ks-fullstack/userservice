@@ -1,13 +1,14 @@
 const mongoose = require("mongoose");
 const config = require('../config.json');
 
-const username = config[process.env.NODE_ENV].dbUsername;
-const password = config[process.env.NODE_ENV].dbPassword;
-const dbName = config[process.env.NODE_ENV].dbName;
+const env = process.env.NODE_ENV;
+const username = config[env].dbUsername;
+const password = config[env].dbPassword;
+const dbName = config[env].dbName;
 
-let connectionStr = config[process.env.NODE_ENV].dbConnectionStr.replace('$username$', username).replace('$password$', password).replace('$dbname$', dbName);
+let connectionStr = config[env].dbConnectionStr.replace('$username$', username).replace('$password$', password).replace('$dbname$', dbName);
 console.log(connectionStr);
-let options = config[process.env.NODE_ENV].dbSettings;
+let options = config[env].dbSettings;
 mongoose.connect(connectionStr, options);
 
 mongoose.Promise = global.Promise;
