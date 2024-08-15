@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "fdea89a1-d23f-461f-9d11-02d7397e2ccb",
+		"name": "Intranet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31669456"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/userservice/api/user/get"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/userservice/api/user/get/6684ec6c965e57b29d9b2e2d"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/userservice/api/user/get/count"
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Krishna\",\r\n    \"middlename\": \"\",\r\n    \"lastname\": \"Sawant\",\r\n    \"gender\": \"male\",\r\n    \"dob\": \"1992-09-02\",\r\n    \"email\": \"mailto.krishnasawant@gmail.com\",\r\n    \"countryCode\": \"+91\",\r\n    \"mobile\": 8691817267,\r\n    \"userid\": \"krish1992\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/userservice/api/user/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Add User Empty",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/userservice/api/user/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filterExp\": {\r\n        \"userid\": \"superadmin\"\r\n    },\r\n    \"data\": {\r\n        \"email\": \"super.admin@gmail.com\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/userservice/api/user/update"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filterExp\": {\r\n        \"userid\": \"admin\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/userservice/api/user/delete"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get Role",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/userservice/api/role/get"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/userservice/api/role/get/6684ec6c965e57b29d9b2e2d"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:5000/userservice/api/role/get/count"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Role",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleId\": \"R00003\",\r\n    \"role\": \"supervisor\",\r\n    \"description\": \"Read write access to manage user, post, content and many more\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/userservice/api/role/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Role Empty",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/userservice/api/role/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"filterExp\": {\r\n        \"userid\": \"superadmin\"\r\n    },\r\n    \"data\": {\r\n        \"description\": \"Read write access to add/update product, manage user and my more feature\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/userservice/api/role/update"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
